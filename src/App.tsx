@@ -5,7 +5,6 @@ import { Transactions } from './components/Transactions';
 import { Rewards } from './components/Rewards';
 import { KnotLink } from './components/KnotLink';
 import type { Transaction, Connection, CarbonFootprint, EcoPoints } from './types';
-import { ProductCategory } from './types';
 import { aggregateCarbonFootprint, aggregateEcoPoints } from './utils/carbonCalculations';
 import './App.css';
 
@@ -14,7 +13,7 @@ function App() {
   const [connections, setConnections] = useState<Connection[]>([]);
   const [carbonFootprint, setCarbonFootprint] = useState<CarbonFootprint | null>(null);
   const [ecoPoints, setEcoPoints] = useState<EcoPoints | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
   useEffect(() => {
     // Calculate carbon footprint and eco points from transactions
@@ -88,8 +87,8 @@ function App() {
             <Route 
               path="/connect" 
               element={
-                <div className="connect-accounts">                  
-                  <KnotLink onSuccess={handleConnectionSuccess} />
+                <div className="connect-accounts">
+                                    <KnotLink onSuccess={handleConnectionSuccess} />
 
                   <div className="connections-list">
                     <h3>Connected Accounts ({connections.length})</h3>

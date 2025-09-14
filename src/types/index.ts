@@ -19,7 +19,7 @@ export interface Product {
   is_sustainable?: boolean;
 }
 
-export enum ProductCategory {
+export const enum ProductCategory {
   ELECTRONICS = 'electronics',
   CLOTHING = 'clothing',
   FOOD = 'food',

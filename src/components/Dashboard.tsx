@@ -17,9 +17,6 @@ export const Dashboard: React.FC<DashboardProps> = ({
   transactions, 
   loading = false 
 }) => {
-  // Set current date to February 10th, 2024
-  const currentDate = new Date('2024-02-10');
-
   if (loading) {
     return (
       <div style={dashboardStyles.container}>

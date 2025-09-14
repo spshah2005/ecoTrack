@@ -362,7 +362,7 @@ export const Rewards: React.FC<RewardsProps> = ({ ecoPoints }) => {
           <ellipse cx="450" cy="420" rx="350" ry="25" fill="#8B7355" opacity="0.6" />
           
           {/* Render plants with evolution system */}
-          {plants.map((plant, index) => (
+          {plants.map((plant) => (
             <g key={plant.id}>
               <g style={{ 
                 animation: `plantGrow 0.8s ease-out ${plant.animationDelay}s both` 
