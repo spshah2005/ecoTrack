@@ -19,13 +19,16 @@ export interface Product {
   is_sustainable?: boolean;
 }
 
-export const enum ProductCategory {
-  ELECTRONICS = 'electronics',
-  CLOTHING = 'clothing',
-  FOOD = 'food',
-  GROCERIES = 'groceries',
-  OTHER = 'other'
-}
+export type ProductCategory = 'electronics' | 'clothing' | 'food' | 'groceries' | 'other';
+
+// Constants for ProductCategory values (replaces enum functionality)
+export const ProductCategory = {
+  ELECTRONICS: 'electronics' as const,
+  CLOTHING: 'clothing' as const,
+  FOOD: 'food' as const,
+  GROCERIES: 'groceries' as const,
+  OTHER: 'other' as const
+} as const;
 
 export interface Connection {
   id: string;

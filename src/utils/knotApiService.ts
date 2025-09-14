@@ -1,4 +1,4 @@
-import type { Transaction, Connection, CarbonFootprint, EcoPoints } from '../types';
+import type { Transaction } from '../types';
 import { ProductCategory } from '../types';
 
 // Knot API integration utilities
